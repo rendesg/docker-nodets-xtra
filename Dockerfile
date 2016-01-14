@@ -2,6 +2,11 @@ FROM gitlab/gitlab-runner:latest
 
 MAINTAINER Gabor Rendes <rendesg@gmail.com>
 
+ENV GITLAB_CI_URL=yourgitlabci.com
+ENV GITLAB_CI_TOKEN=runners
+ENV GITLAB_CI_NAME=java-maven-sonar-1
+ENV GITLAB_CI_EXECUTOR=shell
+
 RUN apt-get update
 
 RUN set -ex \
